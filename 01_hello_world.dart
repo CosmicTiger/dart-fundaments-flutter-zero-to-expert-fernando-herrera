@@ -18,7 +18,7 @@ void main() {
 
   // ---> Variable declaration (const)
   // NOTE: This is a variable declaration similar to final but it applies explictly during compile time execution
-  // const myName4 = 'Luisangel Marcia Palma';
+  const myName5 = 'Luisangel Marcia Palma';
 
   // ---> Variable reassignation
   // NOTE: This is a variable reassignation attempt with no success due to be declared as final
@@ -27,9 +27,18 @@ void main() {
   // NOTE: This is a variable reassignation attempt with success due to be declared as late
   myName4 = 'Luisangel Marcia Palma';
 
+  // NOTE: This is a variable reassignation attempt with no success due to be declared as const
+  // myName5 = 'Luisangel Marcia Palma';
+
   // ---> Print (Interpolations)
   // NOTE: Applies interpolation of strings, similar as in JavaScript Template string
   // print('Hello, world for you, $myName');
   // print('Hello, world for you, $myName3');
   print('Hello, world for you, $myName4');
+
+  // ---> Print (Concatenation)
+  print('Hello, world for you, ${myName5.toUpperCase()}');
+
+  // ---> Print (Interpolation of arithmetic expression)
+  print('Basic Sum: ${2 + 2}');
 }
