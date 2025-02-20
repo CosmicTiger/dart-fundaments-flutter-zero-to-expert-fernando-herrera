@@ -1,12 +1,8 @@
 void main() {
   final windPlant = WindPlant(initialEnergy: 100);
-  final nuclearPlant = NuclearPlant(energyLeft: 1000);
 
   print(
       'Wind plant energy: ${windPlant.energyLeft}'); // Output: Wind plant energy: 100.0
-
-  print(
-      'Nuclear plant energy: ${nuclearPlant.energyLeft}'); // Output: Nuclear plant energy: 100.0
 
   windPlant.consumeEnergy(50);
   print(
@@ -15,8 +11,6 @@ void main() {
 
   print('Charging phone... Wind plant energy: ${chargePhone(windPlant)}');
   // Output: Charging phone... Wind plant energy: 40.0
-  print('Charging phone... Nuclear plant energy: ${chargePhone(nuclearPlant)}');
-  // Output: Charging phone... Nuclear plant energy: 40.0
 
   windPlant.checkEnergy(); // Output: Energy left: 40.0
 }
@@ -58,31 +52,6 @@ class WindPlant extends EnergyPlant {
   @override
   double consumeEnergy(double amount) {
     energyLeft -= amount;
-
-    return energyLeft;
-  }
-}
-
-// NOTE: implements applicability
-class NuclearPlant implements EnergyPlant {
-  @override
-  double energyLeft;
-
-  @override
-  final PlantType type = PlantType.nuclear;
-
-  NuclearPlant({required this.energyLeft});
-
-  @override
-  void checkEnergy() {
-    print('Energy left: $energyLeft');
-  }
-
-  @override
-  double consumeEnergy(double amount) {
-    double amountToConsume = amount * 0.5;
-    print('Consuming $amountToConsume energy...');
-    energyLeft -= amountToConsume;
 
     return energyLeft;
   }
