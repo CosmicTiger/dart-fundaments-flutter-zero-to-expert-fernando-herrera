@@ -1,0 +1,12 @@
+{
+	"recommendations": [
+		"dart-code.dart-code",
+		"oscarcs.dart-syntax-highlighting-only",
+		"hzgood.dart-data-class-generator",
+		"peterhdd.dartgettersetter",
+		"aaron-bond.better-comments",
+		"leodevbro.blockman",
+		"usernamehw.errorlens",
+		"editorconfig.editorconfig"
+	]
+}
